@@ -16,7 +16,7 @@ class Pregunta(models.Model):
     updated = models.DateTimeField(auto_now=True, verbose_name="Fecha de edición")
     
     def __str__(self):
-        return str(self.id)+self.cont
+        return str(self.id)+ " " + self.cont + " " + self.motivo
 
 class PerfilPersona(models.Model):
     nombreCompleto = models.CharField(verbose_name="Nombre completo", max_length=200)

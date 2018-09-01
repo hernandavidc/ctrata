@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,700,700i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
     <!-- Estilos -->
-    <link href="{% static 'core/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'core/vendor/bootstrap/css/bootstrap.css' %}" rel="stylesheet">
     <link href="{% static 'core/vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
     <link href="{% static 'core/css/main.css' %}" rel="stylesheet">
   </head>
@@ -36,10 +36,10 @@
                 <li class="nav-item">
                   <a class="nav-link" href="{% url 'login' %}">Acceder</a>
                 </li>
-                
+                <!--
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'signup' %}">Registro</a>
-                  </li> 
+                  </li> -->
               {% else %}
                 <li class="nav-item">
                   <a class="nav-link" href="{% url 'profiles:list' %}">Perfiles</a>

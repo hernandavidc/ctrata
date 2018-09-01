@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Casos reales{% endblock %}
+{% block content %}
+<h1>Casos reales Colombia <small>Tomado de: formato reporte de casos victimas asistidas 2015-2018</small></h1>
+<div class="container">
+<div class="row">
+        <table class="table table-hover">
+        <thead>
+                <tr>
+                  <th scope="col">Fecha</th>
+                  <th scope="col">Género</th>
+                  <th scope="col">Finalidad de la explotación</th>
+                  <th scope="col">Estrato socioeconómico</th>
+                  <th scope="col">Medio de contacto</th>
+                  <th scope="col">Forma de captación</th>
+                  <th scope="col">Tipo de trata</th>
+                  <th scope="col">Descripción de la forma de captación</th>
+                  <th scope="col">Lugar de explotación</th>
+                  <th scope="col">Medio de transporte utilizado</th>
+                  <th scope="col">Rutas de traslado</th>
+                </tr>
+              </thead>
+              <tbody>
+{% for caso in object_list %}
+<tr>
+    <td>{{ caso.fecha }}</td>
+    <td>{%if caso.genero == 'm'%}Masculino
+                {% else %}Femenino{% endif %}</td>
+    <td>{{ caso.edad }}</td>
+    <td>{{caso.finalidadExplotación}} -  {%if caso.finalidadExplotación == 'ex' %}Explotación de la prostitución ajena u otras formas de Explotación sexual
+        {% elif caso.finalidadExplotación == 'tr' %} Trabajos o servicios forzosos
+        {% elif caso.finalidadExplotación == 'me' %} Mendicidad ajena
+        {% elif caso.finalidadExplotación == 'ma' %} Matrimonio servil
+        {% elif caso.finalidadExplotación == 'ir' %} Extracción de órganos
+        {% elif caso.finalidadExplotación == 'es' %} Practicas análogas a la esclavitud
+        {% elif caso.finalidadExplotación == 'se' %} Servidumbre
+        {% elif caso.finalidadExplotación == 'no' %} No se concretó
+        {% else %}Otro{% endif %}</td>
+    <td>{{ caso.estratoSocioeconomico }}</td>
+    <td>{{caso.medioContacto}} - {%if caso.medioContacto == 're' %}Redes sociales
+            {% elif caso.medioContacto == 'cl' %} Clasificados
+            {% elif caso.medioContacto == 'ra' %} Radio
+            {% elif caso.medioContacto == 'am' %} Amigo(a)
+            {% elif caso.medioContacto == 'pr' %} Pareja
+            {% else %}Otro{% endif %}</td>
+    <td>{{caso.formaCaptación}} - {%if caso.formaCaptación == 'ol' %} Oferta labora
+            {% elif caso.formaCaptación == 're' %} Relación sentimental
+            {% elif caso.formaCaptación == 'oa' %} Oferta académica
+            {% elif caso.formaCaptación == 'tu' %} Turismo
+            {% else %}Otro{% endif %}</td>
+    <td>{%if caso.tipoTrata == 'i'%}Interna
+            {% else %}Externa{% endif %}</td>
+    <td>{{ caso.descriptFormaCap }}</td>
+    <td>{{ caso.lugarExplotación }}</td>
+    <td>{{caso.medioTransporte}} - {%if caso.medioTransporte == 'a' %}Avión
+            {% elif caso.medioTransporte == 'b' %} Bus
+            {% elif caso.medioTransporte == 'm' %} Maritimo
+            {% else %}Otro{% endif %}</td>
+    <td>{{ caso.rutaTraslado }}</td>
+    </tr>
+{% empty %}
+    <td>No articles yet.</td>
+{% endfor %}
+</tbody>
+</table>
+</div>
+</div>
+{% endblock %}
