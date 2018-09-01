@@ -2,16 +2,16 @@
 {% load static %}
 {% block title %}Casos reales{% endblock %}
 {% block content %}
-<h1>Casos reales Colombia <small>Tomado de: formato reporte de casos victimas asistidas 2015-2018</small></h1>
-<div class="container">
-<div class="row">
+<h1 style="text-align:center;">Casos reales Colombia <small style="font-size:11px;">Tomado de: formato reporte de casos victimas asistidas 2015-2018</small></h1>
+
         <table class="table table-hover">
         <thead>
                 <tr>
                   <th scope="col">Fecha</th>
                   <th scope="col">Género</th>
+                  <th scope="col">Edad</th>
                   <th scope="col">Finalidad de la explotación</th>
-                  <th scope="col">Estrato socioeconómico</th>
+                  <th scope="col">Estrato</th>
                   <th scope="col">Medio de contacto</th>
                   <th scope="col">Forma de captación</th>
                   <th scope="col">Tipo de trata</th>
@@ -64,6 +64,4 @@
 {% endfor %}
 </tbody>
 </table>
-</div>
-</div>
 {% endblock %}
