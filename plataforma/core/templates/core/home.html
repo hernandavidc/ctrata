@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>C-trata home</title>
+    {% load static %}
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+    <!-- Estilos -->
+    <link href="{% static 'core/vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{% static 'core/css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/vendor.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/home.css' %}">
+  </head>
+  <body>
+    <body>
+        <header class="s-header">
+
+            <div class="header-logo">
+                <a class="site-logo" href="{% url 'home' %}">
+                    C-trata
+                </a>
+            </div> <!-- end header-logo -->
+    
+            <nav class="header-nav">
+    
+                <a href="#0" class="header-nav__close" title="close"><span>Close</span></a>
+    
+                <div class="header-nav__content">
+                    <h3>C - trata</h3>
+                    
+                    <ul class="header-nav__list">
+                        <li class="current"><a  href="{% url 'home' %}" title="home">Inicio</a></li>
+                        <li><a  href="{% url 'pages:pages' %}" title="blog">Blog</a></li>
+                        <li><a  href="{% url 'login' %}" title="services">Acceder</a></li>
+                        <li><a  href="{% url 'Map' %}" title="services">Mapa</a></li>
+                        <li><a  href="#contact" title="contact">Contact</a></li>
+                    </ul>
+        
+                    <p>Perspiciatis hic praesentium nesciunt. Et neque a dolorum <a href='#'>voluptatem</a> porro iusto sequi veritatis libero enim. Iusto id suscipit veritatis neque reprehenderit.</p>
+        
+                    <ul class="header-nav__social">
+                        <li>
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-behance"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-dribbble"></i></a>
+                        </li>
+                    </ul>
+    
+                </div> <!-- end header-nav__content -->
+    
+            </nav> <!-- end header-nav -->
+    
+            <a class="header-menu-toggle" href="#0">
+                <span class="header-menu-icon"></span>
+            </a>
+    
+        </header> <!-- end s-header -->
+
+        <!-- home
+    ================================================== -->
+    <section id="home" class="s-home target-section" style="background: url({% static 'core/img/bg.jpg' %});background-size: cover;" data-parallax="scroll" data-image-src="{% static 'core/img/bg.jpg' %}" data-natural-width=3000 data-natural-height=2000 data-position-y=top>
+
+      <div class="shadow-overlay"></div>
+
+      <div class="home-content">
+
+          <div class="row home-content__main">
+              <h1>
+              ¡Hola mundo! Somos<br>
+              C-trata
+              </h1>
+
+              <p>
+              Creemos que todos somos ciudadanos del mundo, <br>
+              por eso queremos espacios mas seguros.
+              </p>
+          </div> <!-- end home-content__main -->
+
+      </div> <!-- end home-content -->
+
+      <ul class="home-sidelinks">
+          <li><a class="smoothscroll" href="#about">Nosotros<span>¿Quiénes somos?</span></a></li>
+          <li><a  class="smoothscroll" href="#contact">Contacto<span>¡Charlemos!</span></a></li>
+          <li><a  class="smoothscroll" href="{% url 'Map' %}">Mapa de calor</a></li>
+      </ul> <!-- end home-sidelinks -->
+
+      <ul class="home-social">
+          <li class="home-social-title">Síguenos </li>
+          <li><a href="#">
+              <i class="fa fa-facebook"></i>
+              <span class="home-social-text">Facebook</span>
+          </a></li>
+          <li><a href="#">
+              <i class="fa fa-twitter"></i>
+              <span class="home-social-text">Twitter</span>
+          </a></li>
+          <li><a href="#">
+              <i class="fa fa-linkedin"></i>
+              <span class="home-social-text">LinkedIn</span>
+          </a></li>
+      </ul> <!-- end home-social -->
+
+      <a href="#about" class="home-scroll smoothscroll">
+          <span class="home-scroll__icon fa fa-arrow-down"></span>
+      </a> <!-- end home-scroll -->
+
+  </section> <!-- end s-home -->
+
+      <!-- about
+    ================================================== -->
+    <section id='about' class="s-about">
+
+        <div class="row section-header">
+            <div class="col-full">
+                <h3 class="subhead">¿Quiénes somos?</h3>
+                <h1 class="display-1">Un grupo multidiciplinar conformado por cinco mentes brillantes unidas por una misma causa,</h1>
+            </div>
+        </div> <!-- end section-header -->
+
+        <div class="row">
+            <div class="col-full">
+                <p class="lead">
+                    combatir a través de la prevención la Trata de Personas brindando soluciones tecnologicas. Nico es nuestro código programador, Jhonny nuestro corazón azul, Moni es la imagen encargada de trasmitir nuestra buena vibra, John es el líder de programación y Herni se la pasa en las nubes. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec rutrum congue leo eget malesuada. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.
+                </p>
+            </div>
+        </div> <!-- end about-desc -->
+
+        <div class="row">
+
+            <div class="about-process process block-1-2 block-tab-full">
+
+                <div class="process__vline-left"></div>
+                <div class="process__vline-right"></div>
+
+                <div class="col-block process__col" data-item="1">
+                    <div class="process__text">
+                        <h4>Sistematizar</h4>
+
+                        <p>
+                        Quos dolores saepe mollitia deserunt accusamus autem reprehenderit. Voluptas facere animi explicabo non quis magni recusandae.
+                        Numquam debitis pariatur omnis facere unde. Laboriosam minus amet nesciunt est. Et saepe eos maxime tempore quasi deserunt ab.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-block process__col" data-item="2">
+                    <div class="process__text">
+                        <h4>Identificar</h4>
+
+                        <p>
+                        Quos dolores saepe mollitia deserunt accusamus autem reprehenderit. Voluptas facere animi explicabo non quis magni recusandae.
+                        Numquam debitis pariatur omnis facere unde. Laboriosam minus amet nesciunt est. Et saepe eos maxime tempore quasi deserunt ab.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-block process__col" data-item="3">
+                    <div class="process__text">
+                        <h4>Alertar</h4>
+
+                        <p>
+                        Quos dolores saepe mollitia deserunt accusamus autem reprehenderit. Voluptas facere animi explicabo non quis magni recusandae.
+                        Numquam debitis pariatur omnis facere unde. Laboriosam minus amet nesciunt est. Et saepe eos maxime tempore quasi deserunt ab.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-block process__col" data-item="4">
+                    <div class="process__text">
+                        <h4>Prevenir</h4>
+
+                        <p>
+                        Quos dolores saepe mollitia deserunt accusamus autem reprehenderit. Voluptas facere animi explicabo non quis magni recusandae.
+                        Numquam debitis pariatur omnis facere unde. Laboriosam minus amet nesciunt est. Et saepe eos maxime tempore quasi deserunt ab.
+                        </p>
+                    </div>
+                </div>
+
+            </div> <!-- end process -->
+
+        </div> <!-- end about-stats -->
+
+    </section> <!-- end s-about -->
+
+
+
+      <script src="{% static 'core/vendor/jquery/jquery.min.js' %}"></script>
+      <script src="{% static 'core/js/home/main.js' %}"></script>
+      <script src="{% static 'core/js/home/modernizr.js' %}"></script>
+      <script src="{% static 'core/js/home/pace.min.js' %}"></script>
+  </body>
+</html>
